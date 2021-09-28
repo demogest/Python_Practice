@@ -11,7 +11,7 @@ def prime(n):
             if i%j == 0:
                 break
     return s
-def calc(n,s,pr):
+def calc(n:int,s:list,pr:list):
     if n == 1:
         ans=""
         for i in s[1:]:
@@ -25,9 +25,11 @@ def calc(n,s,pr):
                 calc(n/i,s,pr)
                 s.pop()
                 break
-n=eval(input())
-s=list()
-pr = []
-s.append(n)
-pr = prime(n)
-calc(n,s,pr)
+if __name__ == '__main__':
+    n=eval(input("input the number(isprime):"))
+    s=list()
+    pr = []
+    s.append(n)
+    pr = prime(n)
+    calc(n,s,pr)
+    

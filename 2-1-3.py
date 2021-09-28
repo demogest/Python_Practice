@@ -1,4 +1,4 @@
-a, n = eval(input())
+a, n = eval(input("Please enter the multiplier and number of iterations(Divided by commas):"))
 s = ""
 while n>1:
     s=s+str(a)+"+"

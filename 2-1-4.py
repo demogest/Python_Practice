@@ -1,18 +1,11 @@
-n,s,a=1,0,2
-def fib_Yield(n):
-    a,b=0,1
-    while n>0:
-        yield b
-        a,b=b,a+b
-        n-=1
-la = list(fib_Yield(21))
-n=1
-while n<=20:
-    if n<20:
-        print(str(a)+"/"+str(la[n])+"+",end="")
-    else:
-        print(str(a)+"/"+str(la[n]))
-    s=a/la[n]
-    a=a+la[n]
-    n+=1
-print(s)
+from functools import reduce
+x,y=2,1
+l = []
+s=str(x)+"/"+str(y)+"+"
+l.append(x/y)
+for i in range(19):
+    x,y=x+y,x
+    s=s+str(x)+"/"+str(y)+"+"
+    l.append(x/y)
+print(s[:-1])
+print(reduce(lambda x,y:x+y,l))
