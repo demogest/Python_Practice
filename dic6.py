@@ -11,7 +11,7 @@ def setone(book:dict):
     return 0
 def delone(book:dict):
     eng = input('Eng:')
-    if name in book:
+    if eng in book:
         del book[eng]
         return 0
     print("Not found")
