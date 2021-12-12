@@ -46,4 +46,7 @@ tk.Button(wd, text='Login', command=login).grid(row=2, rowspan=1, column=0, colu
 tk.Button(wd, text='Quit', command=wd.quit).grid(row=2, rowspan=1, column=3, columnspan=3)
 acctin.focus_force()
 wd.bind('<Escape>', exit_esc)
+ls = tk.Listbox(wd, width=20, height=20)
+ls.grid(row=3, column=0, columnspan=5)
+tk.Scrollbar(wd, orient="vertical", command=ls.yview).grid(row=3)
 wd.mainloop()
